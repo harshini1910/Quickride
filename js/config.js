@@ -1,33 +1,15 @@
-
-<!-- File: js/config.js -->
-<script>
-/* Global config Wild-Rydes expects */
 window._config = {
-  cognito: {
-    // *** Your pool & client ***
-    userPoolId: 'ap-south-1_P6doqunEC',                   // <- your user pool ID
-    userPoolClientId: '792rolav85en8cmtcghbi2cbka',       // <- your public client ID (no secret)
-    region: 'ap-south-1',
-
-    // *** Your Hosted UI domain (without https:// in AppWebDomain field usage) ***
-    domain: 'ap-south-15cvoixmg.auth.ap-south-1.amazoncognito.com',
-
-    // *** Redirects (MUST match app client Allowed URLs) ***
-    redirectSignIn: 'https://main.d1bh5cxy59uqi4.amplifyapp.com//ride.html',
-    redirectSignOut: 'https://main.d1bh5cxy59uqi4.amplifyapp.com/signout',
-
-    // *** Scopes & Flow ***
-    scope: ['openid','email','profile','phone'],
-    responseType: 'token'  // <- IMPORTANT: implicit flow so tokens arrive in URL hash on ride.html
-  },
-
-  // Leave empty for now to show the “Successfully Authenticated!” banner
-  api: {
-    invokeUrl: ''   // We'll fill later when your API Gateway URL is ready
-  }
+    cognito: {
+        userPoolId: 'ap-south-1_DwYJAIXvg', // e.g. us-east-2_uXboG5pAb
+        userPoolClientId: '5kctgct0r7eagjtkhf5jbp07bd', // e.g. 25ddkmj4v6hfsfvruhpfi7n4hv
+        region: 'ap-south-1' // e.g. us-east-2
+    },
+    api: {
+        invokeUrl: 'https://basz01mpol.execute-api.ap-south-1.amazonaws.com/dev' // e.g. https://rc7nyt4tql.execute-api.us-west-2.amazonaws.com/prod',
+    }
 };
-</script>
-
+ 
+ 
 
 
 
